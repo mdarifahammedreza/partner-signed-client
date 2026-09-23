@@ -1,4 +1,4 @@
-# @banglareels/partner-signed-client
+# @danumai/partner-signed-client
 
 Reference client for BanglaReels' **Business Partner** signed-request protocol. One universal
 function handles both supported signing schemes — **HMAC** and **Ed25519** — for calling BanglaReels'
@@ -10,7 +10,7 @@ Zero runtime dependencies. Requires Node.js 18+ (uses the built-in `fetch` and `
 ## Install
 
 ```sh
-npm install @banglareels/partner-signed-client
+npm install @danumai/partner-signed-client
 ```
 
 ## The two directions
@@ -30,7 +30,7 @@ This protocol is used in two directions, and they don't use quite the same heade
 The most common integration: mint a short-lived WebView entry code for a subscriber.
 
 ```js
-const { handoff } = require('@banglareels/partner-signed-client');
+const { handoff } = require('@danumai/partner-signed-client');
 
 const result = await handoff({
   baseUrl: 'https://dev-api.banglareels.com',
@@ -76,7 +76,7 @@ public key when we set up your credential; never share the private key with us o
 `signedRequest()` is the lower-level, general-purpose function `handoff()` is built on:
 
 ```js
-const { signedRequest } = require('@banglareels/partner-signed-client');
+const { signedRequest } = require('@danumai/partner-signed-client');
 
 const result = await signedRequest({
   baseUrl: 'https://dev-api.banglareels.com',

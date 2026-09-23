@@ -1,5 +1,5 @@
 {
-  "name": "@banglareels/partner-signed-client",
+  "name": "@danumai/partner-signed-client",
   "version": "0.1.0",
   "description": "Reference client for BanglaReels' Business Partner signed-request protocol — one universal function for both HMAC and Ed25519 signing schemes.",
   "main": "index.js",
@@ -29,6 +29,6 @@
   },
   "license": "UNLICENSED",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
