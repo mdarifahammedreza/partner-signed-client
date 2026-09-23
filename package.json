@@ -1,0 +1,34 @@
+{
+  "name": "@banglareels/partner-signed-client",
+  "version": "0.1.0",
+  "description": "Reference client for BanglaReels' Business Partner signed-request protocol — one universal function for both HMAC and Ed25519 signing schemes.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test:hmac": "node examples/test-handoff-hmac.js",
+    "test:ed25519": "node examples/test-handoff-ed25519.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src/"
+  ],
+  "keywords": [
+    "banglareels",
+    "business-partner",
+    "hmac",
+    "ed25519",
+    "signed-request"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdarifahammedreza/partner-signed-client.git"
+  },
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
