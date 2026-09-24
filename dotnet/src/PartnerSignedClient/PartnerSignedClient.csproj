@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DanumAi.PartnerSignedClient</RootNamespace>
+    <PackageId>DanumAi.PartnerSignedClient</PackageId>
+    <Version>0.1.0</Version>
+    <Description>Reference .NET client for BanglaReels' Business Partner signed-request protocol — one universal function for both HMAC and Ed25519 signing schemes.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The BCL has no Ed25519 (as of .NET 8); BouncyCastle provides signing + PKCS#8 PEM parsing. -->
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
