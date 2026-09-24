@@ -7,6 +7,8 @@ outbound calls to your `/deduct` endpoint.
 
 Zero runtime dependencies. Requires Node.js 18+ (uses the built-in `fetch` and `crypto`).
 
+> **Python?** A compatible port lives in [`python/`](python/README.md).
+
 ## Install
 
 ```sh

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "danumai-partner-signed-client"
+version = "0.1.0"
+description = "Python port of the BanglaReels partner signed-request reference client (HMAC + Ed25519)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "UNLICENSED" }
+dependencies = ["cryptography>=42"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+partner_signed_client = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
