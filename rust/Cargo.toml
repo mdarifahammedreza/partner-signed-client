@@ -1,0 +1,23 @@
+[package]
+name = "partner-signed-client"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Rust port of the BanglaReels Business Partner signed-request reference client (HMAC + Ed25519)"
+publish = false
+
+[dependencies]
+base64 = "0.22"
+ed25519-dalek = { version = "2", features = ["pkcs8", "pem"] }
+hex = "0.4"
+hmac = "0.12"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+# preserve_order: `serde_json::Value` / `json!` bodies keep their key order, like JSON.stringify.
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.10"
+thiserror = "2"
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
